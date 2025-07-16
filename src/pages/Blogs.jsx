@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { blog_data } from "../assets/assets";
+import { assets, blog_data } from "../assets/assets";
 import Navbar from "../components/Navbar";
 
 const Blogs = () => {
@@ -15,7 +15,8 @@ const Blogs = () => {
     fetchBlogData();
   }, []);
   return data ? (
-    <div>
+    <div className="relative">
+      <img src={assets.gradientBackground} alt="" />
       <Navbar/>
       <div></div>
       <div></div>
